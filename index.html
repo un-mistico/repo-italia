@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>repo_italia — Dati, fatti e numeri per capire l'Italia</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🇮🇹%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="repo_italia — Dati, fatti e numeri per capire l'Italia">
+  <meta property="og:description" content="Dashboard pubbliche e open source su economia, immigrazione e giustizia. Codice aperto su GitHub: contributi, segnalazioni e release notes benvenute.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://un-mistico.github.io/repo-italia/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    *{box-sizing:border-box}
+    body{background:#0F0F12;font-family:'Inter',system-ui,-apple-system,sans-serif;color:#E8E6E3;padding:20px;min-height:100vh}
+    .wrap{max-width:900px;margin:0 auto}
+    .header{text-align:center;padding:40px 0 32px}
+    .header .brand{font-size:13px;color:#E07A5F;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:12px}
+    .header h1{font-size:38px;font-weight:800;color:#fff;letter-spacing:-1px;margin:0 0 10px}
+    .header .tagline{font-size:17px;color:#888;line-height:1.45;margin:0}
+    .section{margin:32px 0}
+    .section h2{font-size:18px;font-weight:700;color:#f0f0f0;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+    .section h2 .icon{font-size:20px}
+    .section p{font-size:15px;color:#aaa;line-height:1.65;margin:0 0 12px}
+    .card{background:#16161B;border:1px solid #222;border-radius:12px;padding:22px;margin-bottom:14px;transition:border-color .2s}
+    .card:hover{border-color:#333}
+    .card h3{font-size:17px;font-weight:700;color:#fff;margin:0 0 8px;display:flex;align-items:center;gap:10px}
+    .card p{font-size:14px;color:#888;line-height:1.6;margin:0 0 14px}
+    .card .link{display:inline-block;font-size:14px;font-weight:600;color:#E07A5F;text-decoration:none}
+    .card .link:hover{text-decoration:underline}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:768px){.grid-3{grid-template-columns:1fr}}
+    .badge{display:inline-block;background:#1A1A20;color:#888;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px;margin-right:6px;margin-bottom:6px}
+    .cta-box{background:#16161B;border:1px solid #222;border-radius:12px;padding:22px;text-align:center;margin:32px 0}
+    .cta-box p{font-size:15px;color:#aaa;line-height:1.65;margin:0 0 16px}
+    .cta-box a{display:inline-block;background:#E07A5F;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none}
+    .cta-box a:hover{background:#c96a52}
+    .release-list{margin:0;padding:0;list-style:none}
+    .release-list li{font-size:14px;color:#aaa;padding:12px 0;border-bottom:1px solid #222}
+    .release-list li:last-child{border-bottom:none}
+    .release-list .date{display:inline-block;color:#888;font-size:12px;width:110px;font-variant-numeric:tabular-nums}
+    .release-list .tag{color:#E07A5F;font-weight:600}
+    .footer-info{margin-top:48px;padding-top:20px;border-top:1px solid #222;font-size:12px;color:#555;line-height:1.7;text-align:center}
+    .footer-info a{color:#777;text-decoration:none}
+    .footer-info a:hover{color:#E07A5F}
+    .note{font-size:12px;color:#666;line-height:1.5}
+    a{color:#E07A5F;text-decoration:none}
+    a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="brand">repo_italia</div>
+      <h1>Dati, fatti e numeri per capire l'Italia</h1>
+      <p class="tagline">Dashboard pubbliche e open source per chi vuole leggere la politica italiana con i numeri reali sotto mano.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📊</span> Le dashboard</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3><span>💰🇮🇹</span> Economia</h3>
+          <p>PIL, debito, deficit, tasse, spesa pubblica, welfare, lavoro e commercio estero.</p>
+          <a class="link" href="https://un-mistico.github.io/economia-dashboard/" target="_blank">Apri la dashboard →</a>
+        </div>
+        <div class="card">
+          <h3><span>🚢🇮🇹</span> Immigrazione</h3>
+          <p>Flussi, sbarchi, permessi, asilo, detenzione, criminalità, impatto economico e cittadinanza.</p>
+          <a class="link" href="https://un-mistico.github.io/immigrazione-dashboard/" target="_blank">Apri la dashboard →</a>
+        </div>
+        <div class="card">
+          <h3><span>⚖️🇮🇹</span> Giustizia</h3>
+          <p>Denunce, tempi dei processi, carceri, magistrati, costi e confronti europei.</p>
+          <a class="link" href="https://un-mistico.github.io/giustizia-dashboard/" target="_blank">Apri la dashboard →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🎯</span> Da cosa nasce</h2>
+      <p>Nelle discussioni politiche i numeri vengono citati continuamente, ma spesso senza contesto: un dato isolato, una percentuale urlata, un confronto con l'anno sbagliato. <strong>repo_italia</strong> nasce dalla voglia di avere sotto mano, in modo veloce e affidabile, i dati rilevanti per descrivere la società italiana e capire cosa è vero e cosa è falso.</p>
+      <p>Non è un sito di opinioni. È uno strumento per chi vuole <strong>fact-checkare da solo</strong>: fonti ufficiali (ISTAT, ministeri, OCSE, Eurostat, CEPEJ), serie storiche, confronti internazionali e un glossario per chi non è tecnico.</p>
+      <p>Ogni dashboard è pensata per rispondere a domande concrete. Quanto dura davvero un processo? Quanti sbarchi ci sono stati? Quanto pesa il debito? Le risposte sono nei grafici, ma anche nei <strong>metadati e nei limiti</strong>: perché un numero va letto in un certo modo, cosa non dice, dove può trarre in inganno.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">👤</span> Chi c'è dietro</h2>
+      <div class="card">
+        <p>Questo progetto è curato da <strong>Matteo Betti</strong> [placeholder: breve bio da aggiornare].</p>
+        <p class="note">La bio verrà completata con una riga su chi sono, perché mi interessa questo lavoro e che tipo di contributo cerco dalla comunità. Se hai idee, scrivimi.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔓</span> Open source e contributi</h2>
+      <p>Tutto il codice è pubblico su GitHub. I dati vengono da fonti istituzionali e da report accreditati. <strong>L'obiettivo è rendere il progetto comunitario:</strong> se vuoi correggere un dato, aggiungere una fonte, migliorare un grafico o proporre una nuova dashboard, i repo sono aperti.</p>
+      <p>
+        <span class="badge">Economia</span><a href="https://github.com/un-mistico/economia-dashboard" target="_blank">un-mistico/economia-dashboard</a>
+      </p>
+      <p>
+        <span class="badge">Immigrazione</span><a href="https://github.com/un-mistico/immigrazione-dashboard" target="_blank">un-mistico/immigrazione-dashboard</a>
+      </p>
+      <p>
+        <span class="badge">Giustizia</span><a href="https://github.com/un-mistico/giustizia-dashboard" target="_blank">un-mistico/giustizia-dashboard</a>
+      </p>
+      <p>
+        <span class="badge" style="background:#E07A5F22;color:#E07A5F">Hub</span><a href="https://github.com/un-mistico/repo-italia" target="_blank">un-mistico/repo-italia</a>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📝</span> Release notes</h2>
+      <ul class="release-list">
+        <li><span class="date">18 giu 2026</span> <span class="tag">Nuovo</span> Lancio dashboard Giustizia: denunce, processi, carceri, magistrati e costi.</li>
+        <li><span class="date">18 giu 2026</span> <span class="tag">Hub</span> Creazione pagina madre repo_italia con link alle tre dashboard.</li>
+        <li><span class="date">17 giu 2026</span> <span class="tag">Update</span> Dashboard Immigrazione: nuova tab Recap, tooltip e miglioramenti UI.</li>
+        <li><span class="date">16 giu 2026</span> <span class="tag">Update</span> Dashboard Economia: revisione stile, titoli emoji, tab Glossario.</li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <p>Hai trovato un errore, vuoi suggerire un dato o proporre una nuova dashboard?</p>
+      <a href="https://github.com/un-mistico/repo-italia/issues" target="_blank">Apri una segnalazione su GitHub</a>
+    </div>
+
+    <div class="footer-info">
+      <p>repo_italia — Dati, fatti e numeri per capire l'Italia</p>
+      <p>Tutti i contenuti sono in buona fede e basati su fonti pubbliche. Verifica sempre le fonti primarie prima di citare i numeri.</p>
+    </div>
+  </div>
+</body>
+</html>
