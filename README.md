@@ -18,7 +18,7 @@ repo_italia è un hub open source di data journalism che raccoglie dashboard pub
 
 Ogni dashboard ha:
 
-- una **landing scrolly-telling** per raccontare 10 numeri chiave;
+- una **landing scrolly-telling** per raccontare 8 indicatori chiave;
 - una **dashboard completa** con grafici, tabelle e confronti;
 - **dataset CSV** scaricabili con fonti e metodologia;
 - **glossario e caveat** per leggere i numeri senza farsi ingannare.

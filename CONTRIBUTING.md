@@ -14,7 +14,7 @@ Grazie per voler migliorare repo_italia. Questo progetto è aperto a correzioni,
 ### 2. Proponi una nuova dashboard
 
 - Apri una issue con label `new-dashboard`.
-- Spiega il tema, le domande a cui risponderebbe, le fonti disponibili e un esempio di 10 numeri chiave.
+- Spiega il tema, le domande a cui risponderebbe, le fonti disponibili e un esempio di 8 indicatori chiave.
 - Se proponi un argomento già coperto da fonti ufficiali stabili, la probabilità che venga preso in carico è più alta.
 
 ### 3. Correggi o aggiungi dati
