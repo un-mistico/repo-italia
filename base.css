@@ -10,14 +10,21 @@
   --text-dark:#555;
   --border:#222;
   --border-hover:#333;
+
+  /* theme accent - overridden per dashboard */
   --accent:#E07A5F;
   --accent-hover:#c96a52;
-  --blue:#4A6FA5;
-  --blue-hover:#3a5a85;
-  --green:#5B8C5A;
-  --gold:#C9A227;
-  --rust:#C45A3D;
-  --rust-hover:#a34a30;
+  --accent-light:#e89a82;
+  --accent-dim:#8a4a3a;
+
+  /* semantic colors */
+  --positive:#81b873;
+  --positive-hover:#6fa361;
+  --negative:#e63a46;
+  --negative-hover:#c92d38;
+  --neutral:#888;
+  --neutral-dim:#555;
+
   --radius-sm:6px;
   --radius-md:8px;
   --radius-lg:14px;
@@ -55,10 +62,10 @@ a:hover{text-decoration:underline}
 .btn:hover .arrow{transform:translateX(4px)}
 .btn-primary{background:var(--accent)}
 .btn-primary:hover{background:var(--accent-hover)}
-.btn-blue{background:var(--blue)}
-.btn-blue:hover{background:var(--blue-hover)}
-.btn-rust{background:var(--rust)}
-.btn-rust:hover{background:var(--rust-hover)}
+.btn-positive{background:var(--positive)}
+.btn-positive:hover{background:var(--positive-hover)}
+.btn-negative{background:var(--negative)}
+.btn-negative:hover{background:var(--negative-hover)}
 
 .btn-sm{padding:8px 16px;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
 
@@ -142,6 +149,10 @@ section:last-child{border-bottom:none}
 .scrolly .big-num{font-size:120px;font-weight:800;color:#fff;line-height:.95;margin:20px 0 24px;opacity:0;transform:translateY(40px) scale(.96);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1)}
 .scrolly .big-num.visible{opacity:1;transform:translateY(0) scale(1)}
 .scrolly .big-num .suffix{font-size:42px;font-weight:600;vertical-align:top;margin-left:6px}
+.scrolly .big-num.accent{color:var(--accent)}
+.scrolly .big-num.positive{color:var(--positive)}
+.scrolly .big-num.negative{color:var(--negative)}
+.scrolly .bar.accent{background:var(--accent)}
 .scrolly .label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.8px;margin-bottom:8px}
 .scrolly .note{font-size:15px;color:var(--text-sub);margin-top:20px;padding-left:16px;border-left:2px solid var(--border);max-width:560px}
 .scrolly .highlight{background:rgba(224,122,95,.12);padding:2px 6px;border-radius:4px;color:var(--accent);font-weight:600}
