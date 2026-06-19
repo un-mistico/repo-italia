@@ -1,0 +1,23 @@
+---
+name: Segnalazione errore
+description: Segnala un errore fattuale, un dato sbagliato o un problema nei testi.
+title: '[ERRORE] '
+labels: ['bug', 'data-review']
+assignees: []
+---
+
+## Dashboard o sezione
+
+Indica il link o il punto del sito interessato.
+
+## Cosa è errato?
+
+Descrivi il problema in modo specifico.
+
+## Fonte corretta
+
+Inserisci link o riferimento al dato ufficiale che supporta la correzione.
+
+## Note aggiuntive
+
+Qualsiasi altro dettaglio utile per la verifica.

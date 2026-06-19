@@ -1,0 +1,69 @@
+# 🇮🇹 repo_italia
+
+**Dati, fatti e numeri per capire l'Italia.**
+
+repo_italia è un hub open source di data journalism che raccoglie dashboard pubbliche, dati scaricabili e metodologia trasparente su economia, immigrazione e giustizia in Italia.
+
+🌐 **Sito pubblico:** [https://un-mistico.github.io/repo-italia/](https://un-mistico.github.io/repo-italia/)
+
+---
+
+## Cosa trovi qui
+
+| Dashboard | Tema | URL |
+|---|---|---|
+| 💰🇮🇹 Economia | Debito, PIL, tasse, spesa, lavoro, commercio estero | [economia-dashboard](https://un-mistico.github.io/economia-dashboard/) |
+| 🚢🇮🇹 Immigrazione | Flussi, asilo, criminalità, impatto economico, confronti UE | [immigrazione-dashboard](https://un-mistico.github.io/immigrazione-dashboard/) |
+| ⚖️🇮🇹 Giustizia | Denunce, processi, carceri, magistrati, costi | [giustizia-dashboard](https://un-mistico.github.io/giustizia-dashboard/) |
+
+Ogni dashboard ha:
+
+- una **landing scrolly-telling** per raccontare 10 numeri chiave;
+- una **dashboard completa** con grafici, tabelle e confronti;
+- **dataset CSV** scaricabili con fonti e metodologia;
+- **glossario e caveat** per leggere i numeri senza farsi ingannare.
+
+---
+
+## Filosofia
+
+- **Zero opinioni, dati chiari.** Non facciamo politica. Mostriamo numeri, fonti e limiti.
+- **Open source.** Codice, dati e metodologia sono pubblici sotto licenza CC BY 4.0.
+- **Trasparenza metodologica.** Ogni indicatore indica anno di riferimento, fonte primaria e caveat interpretativi.
+- **Community driven.** Chiunque può segnalare errori, proporre nuovi dati o suggerire nuove dashboard.
+
+---
+
+## Repository collegati
+
+- [un-mistico/economia-dashboard](https://github.com/un-mistico/economia-dashboard)
+- [un-mistico/immigrazione-dashboard](https://github.com/un-mistico/immigrazione-dashboard)
+- [un-mistico/giustizia-dashboard](https://github.com/un-mistico/giustizia-dashboard)
+
+---
+
+## KPI master
+
+Il file [`kpi_master.csv`](./kpi_master.csv) contiene i principali indicatori delle tre dashboard in un unico CSV, utile per analisti, giornalisti e ricercatori.
+
+---
+
+## Licenza
+
+I **dati** provengono da fonti pubbliche (ISTAT, ministeri, OCSE, Eurostat, CEPEJ, UNHCR, Frontex e altri) e sono riportati in buona fede.
+
+I **testi, grafici e codice** di repo_italia sono rilasciati sotto [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it): puoi riusarli citando la fonte.
+
+---
+
+## Contribuire
+
+Vedi [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
+Per segnalare un errore o proporre un dato, apri una [issue](https://github.com/un-mistico/repo-italia/issues).
+
+---
+
+## Disclaimer
+
+Non tutti i numeri pubblici sono ugualmente robusti. Prima di citare i dati in pubblico, verifica sempre le **fonti primarie** indicate in ogni dashboard.

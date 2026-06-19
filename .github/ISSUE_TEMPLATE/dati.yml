@@ -1,0 +1,23 @@
+---
+name: Aggiunta o aggiornamento dati
+description: Proponi l'aggiunta o l'aggiornamento di un dataset.
+title: '[DATA] '
+labels: ['data', 'enhancement']
+assignees: []
+---
+
+## Dataset
+
+Nome del file o sezione da aggiornare.
+
+## Dati proposti
+
+Descrivi cosa aggiungere o modificare.
+
+## Fonte
+
+Link alla fonte primaria.
+
+## Formato
+
+Il dataset è già in CSV? Hai una struttura compatibile con quella esistente?

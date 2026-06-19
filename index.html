@@ -17,12 +17,15 @@
     .hub-header .brand{font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:12px}
     .hub-header h1{font-size:38px;font-weight:800;color:#fff;letter-spacing:-1px;margin:0 0 10px}
     .hub-header .tagline{font-size:17px;color:var(--text-dim);line-height:1.45;margin:0}
+  
+    .top-nav .cta-nav{background:var(--neutral);color:#fff;border-color:var(--neutral)}
+    .top-nav .cta-nav:hover{background:var(--text-dim)}
   </style>
 </head>
 <body>
   <div class="progress" id="progress"></div>
 
-  <nav class="top-nav" id="nav">
+  <nav class="top-nav hub" id="nav">
     <a class="brand" href="https://un-mistico.github.io/repo-italia/">🇮🇹 repo_italia</a>
     <div class="links">
       <a href="#dashboard">Dashboard</a>
@@ -92,11 +95,11 @@
       <h2><span class="icon">🔓</span> Open source e contributi</h2>
       <p>Tutto il codice è pubblico su GitHub. <strong>L'obiettivo è rendere il progetto comunitario:</strong> se trovi un errore o vuoi aggiungere un dato, apri una issue.</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px;margin:18px 0">
-        <a class="badge accent" style="text-decoration:none" href="https://github.com/un-mistico/economia-dashboard" target="_blank">💰 economia-dashboard</a>
-        <a class="badge accent" style="text-decoration:none" href="https://github.com/un-mistico/immigrazione-dashboard" target="_blank">🚢 immigrazione-dashboard</a>
-        <a class="badge accent" style="text-decoration:none" href="https://github.com/un-mistico/giustizia-dashboard" target="_blank">⚖️ giustizia-dashboard</a>
+        <a class="badge" style="text-decoration:none;background:var(--neutral);color:#fff" href="https://github.com/un-mistico/economia-dashboard" target="_blank">💰 economia-dashboard</a>
+        <a class="badge" style="text-decoration:none;background:var(--neutral);color:#fff" href="https://github.com/un-mistico/immigrazione-dashboard" target="_blank">🚢 immigrazione-dashboard</a>
+        <a class="badge" style="text-decoration:none;background:var(--neutral);color:#fff" href="https://github.com/un-mistico/giustizia-dashboard" target="_blank">⚖️ giustizia-dashboard</a>
         <a class="badge" style="text-decoration:none" href="https://github.com/un-mistico/repo-italia" target="_blank">🇮🇹 repo-italia</a>
-        <a class="badge" style="text-decoration:none;background:var(--accent);color:#fff" href="kpi_master.csv" download>📥 KPI master CSV</a>
+        <a class="badge" style="text-decoration:none;background:var(--neutral);color:#fff" href="kpi_master.csv" download>📥 KPI master CSV</a>
       </div>
     </div>
   </section>
@@ -115,11 +118,11 @@
     <div class="wrap">
       <h2><span class="icon">📝</span> Release notes</h2>
       <ul class="release-list">
-        <li><span class="date">18 giu 2026</span> <span class="tag">Nuovo</span> Landing scrolly-telling per Economia, Immigrazione e Giustizia: racconto prima, dati dopo.</li>
-        <li><span class="date">18 giu 2026</span> <span class="tag">Nuovo</span> Lancio dashboard Giustizia: denunce, processi, carceri, magistrati e costi.</li>
-        <li><span class="date">18 giu 2026</span> <span class="tag">Hub</span> Creazione pagina madre repo_italia con link alle tre dashboard.</li>
-        <li><span class="date">17 giu 2026</span> <span class="tag">Update</span> Dashboard Immigrazione: nuova tab Recap, tooltip e miglioramenti UI.</li>
-        <li><span class="date">16 giu 2026</span> <span class="tag">Update</span> Dashboard Economia: revisione stile, titoli emoji, tab Glossario.</li>
+        <li><span class="date">19 giu 2026</span> <span class="tag">Hub</span> README, CONTRIBUTING, CODE_OF_CONDUCT, LICENSE e issue templates pubblicati. Breadcrumb e colori hub uniformati.</li>
+        <li><span class="date">19 giu 2026</span> <span class="tag">Fix</span> Revisione metodologica post-audit: debito, deficit/Superbonus, archiviazioni, agenti/reati, irregolari/reati, RAL, pressione fiscale reale, dati giustizia.</li>
+        <li><span class="date">19 giu 2026</span> <span class="tag">Nuovo</span> Badge anno su ogni indicatore, sezione "Leve d'intervento" neutrale, master CSV KPI.</li>
+        <li><span class="date">18 giu 2026</span> <span class="tag">Nuovo</span> Landing scrolly-telling per Economia, Immigrazione e Giustizia.</li>
+        <li><span class="date">18 giu 2026</span> <span class="tag">Nuovo</span> Lancio dashboard Giustizia.</li>
       </ul>
     </div>
   </section>
