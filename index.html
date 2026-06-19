@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -6,110 +7,191 @@
   <title>repo_italia — Dati, fatti e numeri per capire l'Italia</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🇮🇹%3C/text%3E%3C/svg%3E">
   <meta property="og:title" content="repo_italia — Dati, fatti e numeri per capire l'Italia">
-  <meta property="og:description" content="Dashboard pubbliche e open source su economia, immigrazione e giustizia. Codice aperto su GitHub: contributi, segnalazioni e release notes benvenute.">
+  <meta property="og:description" content="Dashboard pubbliche e open source su economia, immigrazione e giustizia. Numeri reali, fonti ufficiali, codice aperto.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://un-mistico.github.io/repo-italia/preview.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
     *{box-sizing:border-box}
-    body{background:#0F0F12;font-family:'Inter',system-ui,-apple-system,sans-serif;color:#E8E6E3;padding:20px;min-height:100vh}
-    .wrap{max-width:900px;margin:0 auto}
-    .header{text-align:center;padding:40px 0 32px}
-    .header .brand{font-size:13px;color:#E07A5F;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:12px}
-    .header h1{font-size:38px;font-weight:800;color:#fff;letter-spacing:-1px;margin:0 0 10px}
-    .header .tagline{font-size:17px;color:#888;line-height:1.45;margin:0}
-    .section{margin:32px 0}
-    .section h2{font-size:18px;font-weight:700;color:#f0f0f0;margin:0 0 14px;display:flex;align-items:center;gap:10px}
-    .section h2 .icon{font-size:20px}
-    .section p{font-size:15px;color:#aaa;line-height:1.65;margin:0 0 12px}
-    .card{background:#16161B;border:1px solid #222;border-radius:12px;padding:22px;margin-bottom:14px;transition:border-color .2s}
-    .card:hover{border-color:#333}
-    .card h3{font-size:17px;font-weight:700;color:#fff;margin:0 0 8px;display:flex;align-items:center;gap:10px}
-    .card p{font-size:14px;color:#888;line-height:1.6;margin:0 0 14px}
-    .card .link{display:inline-block;font-size:14px;font-weight:600;color:#E07A5F;text-decoration:none}
-    .card .link:hover{text-decoration:underline}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:768px){.grid-3{grid-template-columns:1fr}}
-    .badge{display:inline-block;background:#1A1A20;color:#888;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px;margin-right:6px;margin-bottom:6px}
-    .cta-box{background:#16161B;border:1px solid #222;border-radius:12px;padding:22px;text-align:center;margin:32px 0}
-    .cta-box p{font-size:15px;color:#aaa;line-height:1.65;margin:0 0 16px}
-    .cta-box a{display:inline-block;background:#E07A5F;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none}
-    .cta-box a:hover{background:#c96a52}
-    .release-list{margin:0;padding:0;list-style:none}
-    .release-list li{font-size:14px;color:#aaa;padding:12px 0;border-bottom:1px solid #222}
-    .release-list li:last-child{border-bottom:none}
-    .release-list .date{display:inline-block;color:#888;font-size:12px;width:110px;font-variant-numeric:tabular-nums}
-    .release-list .tag{color:#E07A5F;font-weight:600}
-    .footer-info{margin-top:48px;padding-top:20px;border-top:1px solid #222;font-size:12px;color:#555;line-height:1.7;text-align:center}
-    .footer-info a{color:#777;text-decoration:none}
-    .footer-info a:hover{color:#E07A5F}
-    .note{font-size:12px;color:#666;line-height:1.5}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#0F0F12;font-family:'Inter',system-ui,-apple-system,sans-serif;color:#E8E6E3;line-height:1.6;overflow-x:hidden}
     a{color:#E07A5F;text-decoration:none}
     a:hover{text-decoration:underline}
+
+    .progress{position:fixed;top:0;left:0;height:3px;background:#E07A5F;z-index:200;width:0;transition:width .1s linear}
+    .top-nav{position:fixed;top:3px;left:0;right:0;z-index:100;background:rgba(15,15,18,.95);backdrop-filter:blur(10px);border-bottom:1px solid #222;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;transition:transform .3s ease}
+    .top-nav .brand{font-size:15px;font-weight:800;color:#fff;letter-spacing:-.3px}
+    .top-nav .brand span{color:#E07A5F}
+    .top-nav .links{display:flex;gap:20px;align-items:center}
+    .top-nav .links a{font-size:13px;font-weight:600;color:#aaa}
+    .top-nav .links a:hover{color:#fff}
+    .top-nav .cta-nav{background:#E07A5F;color:#fff;padding:7px 16px;border-radius:6px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+    .top-nav .cta-nav:hover{background:#c96a52;color:#fff;text-decoration:none}
+    @media(max-width:720px){.top-nav .links a:not(.cta-nav){display:none}}
+
+    .hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 60px;border-bottom:1px solid #1a1a1a;position:relative}
+    .hero .eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#E07A5F;margin-bottom:18px;opacity:0;transform:translateY(12px);transition:all .7s ease}
+    .hero .eyebrow.visible{opacity:1;transform:translateY(0)}
+    .hero h1{font-size:64px;font-weight:800;color:#fff;letter-spacing:-1.6px;margin:0 0 22px;line-height:1.05;max-width:900px;opacity:0;transform:translateY(20px);transition:all .8s ease .1s}
+    .hero h1.visible{opacity:1;transform:translateY(0)}
+    .hero .tagline{font-size:21px;color:#999;line-height:1.55;margin:0 auto 40px;max-width:640px;opacity:0;transform:translateY(20px);transition:all .8s ease .2s}
+    .hero .tagline.visible{opacity:1;transform:translateY(0)}
+    .hero .cta-group{opacity:0;transform:translateY(20px);transition:all .8s ease .3s}
+    .hero .cta-group.visible{opacity:1;transform:translateY(0)}
+    .hero .cta{display:inline-flex;align-items:center;gap:8px;background:#E07A5F;color:#fff;font-size:16px;font-weight:700;padding:16px 32px;border-radius:8px;text-decoration:none;transition:all .2s}
+    .hero .cta:hover{background:#c96a52;transform:translateY(-1px)}
+    .hero .cta-secondary{display:inline-flex;align-items:center;gap:6px;margin-left:16px;color:#888;font-size:15px;text-decoration:none;border-bottom:1px solid #444;padding-bottom:3px;transition:all .2s}
+    .hero .cta-secondary:hover{color:#E07A5F;border-color:#E07A5F}
+    .hero .arrow{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:#444;font-size:26px;animation:bounce 2s infinite}
+    @keyframes bounce{0%,20%,50%,80%,100%{transform:translateX(-50%) translateY(0)}40%{transform:translateX(-50%) translateY(-10px)}60%{transform:translateX(-50%) translateY(-5px)}}
+    @media(max-width:720px){.hero h1{font-size:40px}.hero .tagline{font-size:18px}.hero .cta-secondary{margin-left:0;margin-top:16px}}
+
+    .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+    section{padding:80px 0;border-bottom:1px solid #1a1a1a}
+    section:last-child{border-bottom:none}
+    .section h2{font-size:26px;font-weight:800;color:#fff;margin:0 0 18px;display:flex;align-items:center;gap:12px;letter-spacing:-.6px}
+    .section h2 .icon{font-size:24px}
+    .section p{font-size:17px;color:#aaa;line-height:1.7;margin:0 0 16px;max-width:740px}
+    .section p strong{color:#f0f0f0}
+
+    .kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:40px 0}
+    .kpi{text-align:center;padding:28px 18px;background:#16161B;border:1px solid #222;border-radius:14px;opacity:0;transform:translateY(20px);transition:all .6s ease}
+    .kpi.visible{opacity:1;transform:translateY(0)}
+    .kpi .num{font-size:42px;font-weight:800;color:#E07A5F;line-height:1;margin-bottom:8px}
+    .kpi .label{font-size:14px;color:#888}
+    @media(max-width:720px){.kpi-row{grid-template-columns:1fr}.kpi .num{font-size:34px}}
+
+    .card{background:#16161B;border:1px solid #222;border-radius:14px;padding:26px;transition:all .2s;opacity:0;transform:translateY(24px)}
+    .card.visible{opacity:1;transform:translateY(0)}
+    .card:hover{border-color:#333;transform:translateY(-2px)}
+    .card h3{font-size:18px;font-weight:700;color:#fff;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+    .card p{font-size:15px;color:#888;line-height:1.65;margin:0 0 18px}
+    .card .link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#E07A5F;text-decoration:none}
+    .card .link:hover{gap:10px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media(max-width:900px){.grid-3{grid-template-columns:1fr}}
+
+    .badge{display:inline-block;background:#1A1A20;color:#888;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px;margin-right:8px;margin-bottom:8px}
+    .badge.accent{background:#E07A5F22;color:#E07A5F}
+
+    .cta-box{background:#16161B;border:1px solid #222;border-radius:14px;padding:32px;text-align:center;margin:32px 0;opacity:0;transform:translateY(20px);transition:all .6s ease}
+    .cta-box.visible{opacity:1;transform:translateY(0)}
+    .cta-box p{font-size:17px;color:#aaa;line-height:1.65;margin:0 0 18px}
+    .cta-box a{display:inline-block;background:#E07A5F;color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;text-decoration:none;transition:all .2s}
+    .cta-box a:hover{background:#c96a52}
+
+    .release-list{margin:0;padding:0;list-style:none}
+    .release-list li{font-size:15px;color:#aaa;padding:14px 0;border-bottom:1px solid #222;display:flex;gap:14px;align-items:flex-start}
+    .release-list li:last-child{border-bottom:none}
+    .release-list .date{color:#666;font-size:13px;font-variant-numeric:tabular-nums;min-width:100px;flex-shrink:0}
+    .release-list .tag{color:#E07A5F;font-weight:700;margin-right:8px}
+
+    .footer-info{margin-top:60px;padding-top:24px;border-top:1px solid #222;font-size:13px;color:#555;line-height:1.7;text-align:center}
+    .footer-info a{color:#777;text-decoration:none}
+    .footer-info a:hover{color:#E07A5F}
+    .note{font-size:13px;color:#666;line-height:1.5}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="header">
-      <div class="brand">repo_italia</div>
-      <h1>Dati, fatti e numeri per capire l'Italia</h1>
-      <p class="tagline">Dashboard pubbliche e open source per chi vuole leggere la politica italiana con i numeri reali sotto mano.</p>
-    </div>
+  <div class="progress" id="progress"></div>
 
-    <div class="section">
+  <nav class="top-nav" id="nav">
+    <a class="brand" href="https://un-mistico.github.io/repo-italia/">repo_italia</a>
+    <div class="links">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#about">Progetto</a>
+      <a href="#opensource">Open source</a>
+      <a class="cta-nav" href="https://github.com/un-mistico/repo-italia/issues" target="_blank">Contribuisci →</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="eyebrow">Open source · Fonti ufficiali · No opinioni</div>
+    <h1>Dati, fatti e numeri per capire l'Italia</h1>
+    <p class="tagline">Dashboard pubbliche per chi vuole leggere la politica italiana con i numeri reali sotto mano. Economia, immigrazione e giustizia spiegate in modo chiaro.</p>
+    <div class="cta-group">
+      <a class="cta" href="#dashboard">Esplora le dashboard</a>
+      <a class="cta-secondary" href="https://github.com/un-mistico/repo-italia" target="_blank">Vedi il codice su GitHub →</a>
+    </div>
+    <div class="arrow">↓</div>
+  </section>
+
+  <section id="dashboard">
+    <div class="wrap">
       <h2><span class="icon">📊</span> Le dashboard</h2>
+      <p style="margin-bottom:28px">Ogni dashboard ha ora una landing scrolly-telling: prima il racconto, poi i dati completi con fonti, metodologia e CSV scaricabili.</p>
       <div class="grid-3">
         <div class="card">
           <h3><span>💰🇮🇹</span> Economia</h3>
           <p>PIL, debito, deficit, tasse, spesa pubblica, welfare, lavoro e commercio estero.</p>
-          <a class="link" href="https://un-mistico.github.io/economia-dashboard/" target="_blank">Apri la dashboard →</a>
+          <a class="link" href="https://un-mistico.github.io/economia-dashboard/" target="_blank">Leggi il racconto →</a>
         </div>
+        
         <div class="card">
           <h3><span>🚢🇮🇹</span> Immigrazione</h3>
           <p>Flussi, sbarchi, permessi, asilo, detenzione, criminalità, impatto economico e cittadinanza.</p>
-          <a class="link" href="https://un-mistico.github.io/immigrazione-dashboard/" target="_blank">Apri la dashboard →</a>
+          <a class="link" href="https://un-mistico.github.io/immigrazione-dashboard/" target="_blank">Leggi il racconto →</a>
         </div>
+        
         <div class="card">
           <h3><span>⚖️🇮🇹</span> Giustizia</h3>
           <p>Denunce, tempi dei processi, carceri, magistrati, costi e confronti europei.</p>
-          <a class="link" href="https://un-mistico.github.io/giustizia-dashboard/" target="_blank">Apri la dashboard →</a>
+          <a class="link" href="https://un-mistico.github.io/giustizia-dashboard/" target="_blank">Leggi il racconto →</a>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="section">
+  <section id="about">
+    <div class="wrap">
       <h2><span class="icon">🎯</span> Da cosa nasce</h2>
+      
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="num">3</div>
+          <div class="label">Dashboard pubbliche</div>
+        </div>
+        <div class="kpi">
+          <div class="num">20+</div>
+          <div class="label">Indicatori con fonte</div>
+        </div>
+        <div class="kpi">
+          <div class="num">100%</div>
+          <div class="label">Open source su GitHub</div>
+        </div>
+      </div>
+
       <p>Nelle discussioni politiche i numeri vengono citati continuamente, ma spesso senza contesto: un dato isolato, una percentuale urlata, un confronto con l'anno sbagliato. <strong>repo_italia</strong> nasce dalla voglia di avere sotto mano, in modo veloce e affidabile, i dati rilevanti per descrivere la società italiana e capire cosa è vero e cosa è falso.</p>
       <p>Non è un sito di opinioni. È uno strumento per chi vuole <strong>fact-checkare da solo</strong>: fonti ufficiali (ISTAT, ministeri, OCSE, Eurostat, CEPEJ), serie storiche, confronti internazionali e un glossario per chi non è tecnico.</p>
-      <p>Ogni dashboard è pensata per rispondere a domande concrete. Quanto dura davvero un processo? Quanti sbarchi ci sono stati? Quanto pesa il debito? Le risposte sono nei grafici, ma anche nei <strong>metadati e nei limiti</strong>: perché un numero va letto in un certo modo, cosa non dice, dove può trarre in inganno.</p>
+      <p>Ogni dashboard risponde a domande concrete. Quanto dura davvero un processo? Quanti sbarchi ci sono stati? Quanto pesa il debito? Le risposte sono nei grafici, ma anche nei <strong>metadati e nei limiti</strong>: perché un numero va letto in un certo modo, cosa non dice, dove può trarre in inganno.</p>
     </div>
+  </section>
 
-    <div class="section">
-      <h2><span class="icon">👤</span> Chi c'è dietro</h2>
-      <div class="card">
-        <p>Questo progetto è curato da <strong>Matteo Betti</strong> [placeholder: breve bio da aggiornare].</p>
-        <p class="note">La bio verrà completata con una riga su chi sono, perché mi interessa questo lavoro e che tipo di contributo cerco dalla comunità. Se hai idee, scrivimi.</p>
-      </div>
-    </div>
-
-    <div class="section">
+  <section id="opensource">
+    <div class="wrap">
       <h2><span class="icon">🔓</span> Open source e contributi</h2>
       <p>Tutto il codice è pubblico su GitHub. I dati vengono da fonti istituzionali e da report accreditati. <strong>L'obiettivo è rendere il progetto comunitario:</strong> se vuoi correggere un dato, aggiungere una fonte, migliorare un grafico o proporre una nuova dashboard, i repo sono aperti.</p>
       <p>
-        <span class="badge">Economia</span><a href="https://github.com/un-mistico/economia-dashboard" target="_blank">un-mistico/economia-dashboard</a>
+        <span class="badge accent">Economia</span>
+        <a href="https://github.com/un-mistico/economia-dashboard" target="_blank">un-mistico/economia-dashboard</a>
       </p>
       <p>
-        <span class="badge">Immigrazione</span><a href="https://github.com/un-mistico/immigrazione-dashboard" target="_blank">un-mistico/immigrazione-dashboard</a>
+        <span class="badge accent">Immigrazione</span>
+        <a href="https://github.com/un-mistico/immigrazione-dashboard" target="_blank">un-mistico/immigrazione-dashboard</a>
       </p>
       <p>
-        <span class="badge">Giustizia</span><a href="https://github.com/un-mistico/giustizia-dashboard" target="_blank">un-mistico/giustizia-dashboard</a>
+        <span class="badge accent">Giustizia</span>
+        <a href="https://github.com/un-mistico/giustizia-dashboard" target="_blank">un-mistico/giustizia-dashboard</a>
       </p>
       <p>
-        <span class="badge" style="background:#E07A5F22;color:#E07A5F">Hub</span><a href="https://github.com/un-mistico/repo-italia" target="_blank">un-mistico/repo-italia</a>
+        <span class="badge">Hub</span>
+        <a href="https://github.com/un-mistico/repo-italia" target="_blank">un-mistico/repo-italia</a>
       </p>
     </div>
+  </section>
 
-    <div class="section">
+  <section id="releases">
+    <div class="wrap">
       <h2><span class="icon">📝</span> Release notes</h2>
       <ul class="release-list">
         <li><span class="date">18 giu 2026</span> <span class="tag">Nuovo</span> Landing scrolly-telling per Economia, Immigrazione e Giustizia: racconto prima, dati dopo.</li>
@@ -119,21 +201,42 @@
         <li><span class="date">16 giu 2026</span> <span class="tag">Update</span> Dashboard Economia: revisione stile, titoli emoji, tab Glossario.</li>
       </ul>
     </div>
+  </section>
 
-    <div class="cta-box">
-      <p>Hai trovato un errore, vuoi suggerire un dato o proporre una nuova dashboard?</p>
-      <a href="https://github.com/un-mistico/repo-italia/issues" target="_blank">Apri una segnalazione su GitHub</a>
+  <section id="contribute">
+    <div class="wrap">
+      <div class="cta-box">
+        <p>Hai trovato un errore, vuoi suggerire un dato o proporre una nuova dashboard?</p>
+        <a href="https://github.com/un-mistico/repo-italia/issues" target="_blank">Apri una segnalazione su GitHub</a>
+      </div>
     </div>
+  </section>
 
-    <div class="section" style="margin-top:40px">
+  <section id="license">
+    <div class="wrap">
       <h2><span class="icon">📜</span> Licenza e metodologia</h2>
       <p>I <strong>dati</strong> provengono da fonti pubbliche (ISTAT, ministeri, OCSE, Eurostat, CEPEJ, UNHCR, Frontex e altri) e sono riportati in buona fede. I <strong>testi, grafici e codice</strong> di repo_italia sono rilasciati sotto <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank">CC BY 4.0</a>: puoi riusarli citando la fonte.</p>
       <p>Ogni dashboard indica per ogni indicatore se si tratta di <strong>dato ufficiale, stima o dato provvisorio</strong>. Non tutti i numeri pubblici sono ugualmente robusti: dove serve, abbiamo messo avvertenze e limiti interpretativi. <strong>Verifica sempre le fonti primarie prima di citare i numeri in pubblico.</strong></p>
     </div>
+  </section>
 
-    <div class="footer-info">
-      <p>repo_italia — Dati, fatti e numeri per capire l'Italia · CC BY 4.0</p>
-    </div>
+  <div class="footer-info">
+    <p>repo_italia — Dati, fatti e numeri per capire l'Italia · CC BY 4.0</p>
   </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('visible');
+      });
+    },{threshold:.15});
+    document.querySelectorAll('.eyebrow, .hero h1, .hero .tagline, .hero .cta-group, .card, .kpi, .cta-box').forEach(el=>observer.observe(el));
+
+    const progress = document.getElementById('progress');
+    window.addEventListener('scroll',()=>{
+      const h = document.documentElement;
+      progress.style.width = (h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+    },{passive:true});
+  </script>
 </body>
 </html>
