@@ -1,0 +1,22 @@
+dashboard,indicator,value,unit,year,source
+economia,debito_pil,136.4,% del PIL,2025,MEF/Banca d'Italia
+economia,deficit_pil,3.4,% del PIL,2025,MEF/DEF
+economia,pressione_fiscale,42.7,% del PIL,2024,Eurostat/OCSE
+economia,crescita_pil,0.5,%,2024,ISTAT/Eurostat
+economia,disoccupazione,6.2,%,2024,ISTAT
+economia,saldo_commerciale,30,mld €,2024,ISTAT
+immigrazione,residenti_stranieri,5.3,mln,2024,ISTAT/DOS
+immigrazione,arrivi_sbari,67.5,mila,2024,Ministero Interno
+immigrazione,domande_asilo,91,mila,2024,Ministero Interno
+immigrazione,rimpatri_annui,90,mila,media 2015-2024,Ministero Interno
+immigrazione,stranieri_detenuti,31,% detenuti,2024,DAP
+immigrazione,impatto_fiscale_saldo,4.6,mld €,2023,ISMU/Moressa
+giustizia,reati_denunciati,2.38,mln,2024,Ministero Interno
+giustizia,archiviazioni,60,% procedimenti,2023-24,Ministero Giustizia
+giustizia,durata_civile_3gradi,5.9,anni,2024,CEPEJ
+giustizia,agenti_polizia,290,mila,2024,Ministero Interno
+giustizia,reati_per_100_agenti,820,reati,2024,calcolo su dati Ministero Interno
+giustizia,affollamento_carceri,121,% posti,2024,DAP/Antigone
+giustizia,detenuti,61.9,mila,2024,DAP/Antigone
+giustizia,pm_per_100mila,3.8,pm,2024,CEPEJ/CSM
+giustizia,spesa_giustizia,11.2,mld €,2025 stima,MEF/RGS
