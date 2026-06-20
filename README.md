@@ -12,9 +12,9 @@ repo_italia è un hub open source di data journalism che raccoglie dashboard pub
 
 | Dashboard | Tema | URL |
 |---|---|---|
-| 💰🇮🇹 Economia | Debito, PIL, tasse, spesa, lavoro, commercio estero | [economia-dashboard](https://un-mistico.github.io/economia-dashboard/) |
-| 🚢🇮🇹 Immigrazione | Flussi, asilo, criminalità, impatto economico, confronti UE | [immigrazione-dashboard](https://un-mistico.github.io/immigrazione-dashboard/) |
-| ⚖️🇮🇹 Giustizia | Denunce, processi, carceri, magistrati, costi | [giustizia-dashboard](https://un-mistico.github.io/giustizia-dashboard/) |
+| 💰 Economia | Debito, PIL, tasse, spesa, lavoro, commercio estero | [economia-dashboard](https://un-mistico.github.io/economia-dashboard/) |
+| 🚢 Immigrazione | Flussi, asilo, criminalità, impatto economico, confronti UE | [immigrazione-dashboard](https://un-mistico.github.io/immigrazione-dashboard/) |
+| ⚖️ Giustizia | Denunce, processi, carceri, magistrati, costi | [giustizia-dashboard](https://un-mistico.github.io/giustizia-dashboard/) |
 
 Ogni dashboard ha:
 
@@ -45,6 +45,8 @@ Ogni dashboard ha:
 ## KPI master
 
 Il file [`kpi_master.csv`](./kpi_master.csv) contiene i principali indicatori delle tre dashboard in un unico CSV, utile per analisti, giornalisti e ricercatori.
+
+Il formato del file è documentato in [`data/README.md`](./data/README.md).
 
 ---
 
