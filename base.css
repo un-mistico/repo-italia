@@ -146,6 +146,7 @@ section:last-child{border-bottom:none}
 .note{font-size:13px;color:var(--text-sub);line-height:1.5}
 
 /* scrolly-telling landing extras */
+html.scrolly{scroll-snap-type:y mandatory}
 .scrolly section{min-height:100vh;display:flex;align-items:center;padding:80px 0;scroll-snap-align:start;scroll-snap-stop:always;border-bottom:1px solid var(--border)}
 .scrolly section:last-child{border-bottom:none}
 .scrolly .eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:16px;opacity:0;transform:translateY(10px);transition:all .6s ease}
