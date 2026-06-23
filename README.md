@@ -66,6 +66,21 @@ Per segnalare un errore o proporre un dato, apri una [issue](https://github.com/
 
 ---
 
+## Aggiornamenti
+
+**Giugno 2026**
+- Nuova dashboard Giustizia: 8 indicatori su denunce, processi, carceri, magistrati, costi ed efficienza del sistema giudiziario
+- Fix UI/UX su tutte le landing: barre proporzionali con scala zero-based, allineamento etichette, scroll-snap ripristinato
+- Aggiunti dati verificati: polizia (Eurostat), sovraffollamento carcerario (Antigone), custodia cautelare, recidiva, PM (CEPEJ), digitalizzazione, autori ignoti (ISTAT)
+- Landing Immigrazione: toggle macro-aree di default, chart ratio denunce/presenza con 6 paesi, dati rotte e rimpatri allineati con fonti
+- Landing Economia: scale barre corrette, colori consistenti (Italia accent, altri neutral)
+
+**Maggio 2026**
+- Rilancio hub repo_italia con 3 dashboard: Economia, Immigrazione, Giustizia
+- KPI master CSV con indicatori chiave delle tre aree
+
+---
+
 ## Disclaimer
 
 Non tutti i numeri pubblici sono ugualmente robusti. Prima di citare i dati in pubblico, verifica sempre le **fonti primarie** indicate in ogni dashboard.

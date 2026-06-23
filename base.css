@@ -47,6 +47,7 @@ a:hover{text-decoration:underline}
 
 /* progress bar */
 .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:200;width:0;transition:width .1s linear}
+body.hub .progress{background:var(--hub-accent)}
 
 /* sticky nav */
 .top-nav{position:fixed;top:3px;left:0;right:0;z-index:100;background:rgba(15,15,18,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;transition:transform .3s ease}
@@ -175,7 +176,7 @@ html.scrolly{scroll-snap-type:y mandatory}
 
 .scrolly .bar::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);animation:shimmer 2.5s infinite}
 @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-.scrolly .bar-label{min-width:140px;max-width:200px;color:var(--text-dim);font-size:13px;flex-shrink:0}
+.scrolly .bar-label{width:160px;min-width:160px;color:var(--text-dim);font-size:13px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .scrolly .bar-value{color:#fff;font-weight:700;min-width:60px;text-align:right;font-size:14px;flex-shrink:0}
 
 .scrolly .small-table{width:100%;border-collapse:collapse;font-size:15px;margin-top:18px}
