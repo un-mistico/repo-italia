@@ -164,6 +164,7 @@ section:last-child{border-bottom:none}
 .scrolly .highlight{background:rgba(224,122,95,.12);padding:2px 6px;border-radius:4px;color:var(--accent);font-weight:600}
 .scrolly .bar-block{margin:24px 0}
 .scrolly .bar-wrap{display:flex;align-items:center;gap:14px;margin:12px 0;font-size:14px}
+.scrolly .bar-track{flex:1;min-width:0;position:relative}
 .scrolly .bar{height:28px;background:var(--accent);border-radius:5px;width:0;transition:width 1.4s cubic-bezier(.22,.61,.36,1);position:relative;overflow:hidden}
 .scrolly .bar.accent{background:var(--accent)}
 .scrolly .bar.neutral{background:#555}
