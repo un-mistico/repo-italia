@@ -90,7 +90,7 @@ a:hover{text-decoration:underline}
 .hero .cta-group{display:flex;flex-direction:column;align-items:center;gap:14px;opacity:0;transform:translateY(20px);transition:all .8s ease .3s}
 .hero .cta-group.visible{opacity:1;transform:translateY(0)}
 .cta-group .btn-secondary{margin:0}
-.hero .content{width:100%;max-width:740px;display:flex;flex-direction:column;align-items:center}.hero .content>*{width:100%;max-width:620px;text-align:center}.hero .content>.cta-group{max-width:none;width:auto}.hero .content>.btn-secondary{width:auto}.hero .arrow{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:var(--text-dark);font-size:26px;animation:bounce 2s infinite}
+.hero .content{width:100%;max-width:740px;display:flex;flex-direction:column;align-items:center}.hero .content>*{max-width:620px;text-align:center}.hero .content>.btn{width:auto;max-width:none}.hero .content>div{max-width:620px}.hero .content>.cta-group{max-width:none;width:auto}.hero .content>.btn-secondary{width:auto}.hero .arrow{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:var(--text-dark);font-size:26px;animation:bounce 2s infinite}
 @keyframes bounce{0%,20%,50%,80%,100%{transform:translateX(-50%) translateY(0)}40%{transform:translateX(-50%) translateY(-10px)}60%{transform:translateX(-50%) translateY(-5px)}}
 @media(max-width:720px){.hero{min-height:88vh;padding:76px 20px 50px}.hero h1{font-size:32px;margin-bottom:14px}.hero .tagline{font-size:17px;margin-bottom:24px}.hero .cta-group{display:flex;flex-direction:column;align-items:center;gap:8px}.btn{width:100%;max-width:300px;justify-content:center}}
 
@@ -146,7 +146,7 @@ section:last-child{border-bottom:none}
 .note{font-size:13px;color:var(--text-sub);line-height:1.5}
 
 /* scrolly-telling landing extras */
-.scrolly section{min-height:100vh;display:flex;align-items:center;padding:80px 0;scroll-snap-align:start;scroll-snap-stop:always;border-bottom:1px solid var(--border)}
+.scrolly section{min-height:auto;display:flex;flex-direction:column;justify-content:center;padding:100px 0;scroll-snap-align:start;scroll-snap-stop:normal;border-bottom:1px solid var(--border)}
 .scrolly section:last-child{border-bottom:none}
 .scrolly .eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:16px;opacity:0;transform:translateY(10px);transition:all .6s ease}
 .scrolly .eyebrow.visible{opacity:1;transform:translateY(0)}
@@ -162,10 +162,10 @@ section:last-child{border-bottom:none}
 .scrolly .label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.8px;margin-bottom:8px}
 .scrolly .note{font-size:15px;color:var(--text-sub);margin-top:20px;padding-left:16px;border-left:2px solid var(--border);max-width:560px}
 .scrolly .highlight{background:rgba(224,122,95,.12);padding:2px 6px;border-radius:4px;color:var(--accent);font-weight:600}
-.scrolly .bar-block{margin:24px 0}
+.scrolly .bar-block{margin:24px 0;max-width:600px}
 .scrolly .bar-wrap{display:flex;align-items:center;gap:14px;margin:12px 0;font-size:14px}
-.scrolly .bar-track{flex:1;min-width:0;position:relative}
-.scrolly .bar{height:28px;background:var(--accent);border-radius:5px;width:0;transition:width 1.4s cubic-bezier(.22,.61,.36,1);position:relative;overflow:hidden}
+.scrolly .bar-track{flex:1 1 auto;min-width:120px;position:relative}
+.scrolly .bar{height:32px;background:var(--accent);border-radius:5px;width:0;transition:width 1.4s cubic-bezier(.22,.61,.36,1);position:relative;overflow:hidden}
 .scrolly .bar.accent{background:var(--accent)}
 .scrolly .bar.neutral{background:#555}
 .scrolly .bar.positive{background:var(--positive)}
@@ -174,8 +174,8 @@ section:last-child{border-bottom:none}
 
 .scrolly .bar::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);animation:shimmer 2.5s infinite}
 @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-.scrolly .bar-label{min-width:150px;color:var(--text-dim);font-size:13px}
-.scrolly .bar-value{color:#fff;font-weight:700;min-width:60px;text-align:right;font-size:14px}
+.scrolly .bar-label{min-width:120px;max-width:180px;color:var(--text-dim);font-size:13px;flex-shrink:0}
+.scrolly .bar-value{color:#fff;font-weight:700;min-width:50px;text-align:right;font-size:14px;flex-shrink:0}
 
 .scrolly .small-table{width:100%;border-collapse:collapse;font-size:15px;margin-top:18px}
 .scrolly .small-table td{padding:10px 0;border-bottom:1px solid var(--border);color:var(--text-dim)}
