@@ -12,13 +12,13 @@ repo_italia è un hub open source di data journalism che raccoglie dashboard pub
 
 | Dashboard | Tema | URL |
 |---|---|---|
-| 💰 Economia | Debito, PIL, tasse, spesa, lavoro, commercio estero | [economia-dashboard](https://un-mistico.github.io/economia-dashboard/) |
-| 🚢 Immigrazione | Flussi, asilo, criminalità, impatto economico, confronti UE | [immigrazione-dashboard](https://un-mistico.github.io/immigrazione-dashboard/) |
-| ⚖️ Giustizia | Denunce, processi, carceri, magistrati, costi | [giustizia-dashboard](https://un-mistico.github.io/giustizia-dashboard/) |
+| 💰 Economia | Ricchezza, debito, spesa pubblica, Superbonus, tasse, disuguaglianze, lavoro, produttività | [economia-dashboard](https://un-mistico.github.io/economia-dashboard/) |
+| 🚢 Immigrazione | Presenza, confronto UE, rotte, origini, rimpatri, criminalità, conti pubblici | [immigrazione-dashboard](https://un-mistico.github.io/immigrazione-dashboard/) |
+| ⚖️ Giustizia | Denunce, reati irrisolti, forze dell'ordine, processi, carceri, magistrati, costi | [giustizia-dashboard](https://un-mistico.github.io/giustizia-dashboard/) |
 
 Ogni dashboard ha:
 
-- una **landing scrolly-telling** per raccontare 8 indicatori chiave;
+- una **landing scrolly-telling** per raccontare gli indicatori chiave (8 per economia e immigrazione, 7 per giustizia);
 - una **dashboard completa** con grafici, tabelle e confronti;
 - **dataset CSV** scaricabili con fonti e metodologia;
 - **glossario e caveat** per leggere i numeri senza farsi ingannare.
