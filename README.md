@@ -12,7 +12,7 @@ repo_italia è un hub open source di data journalism che raccoglie dashboard pub
 
 | Dashboard | Tema | URL |
 |---|---|---|
-| 💰 Economia | Ricchezza, debito, spesa pubblica, Superbonus, tasse, disuguaglianze, lavoro, produttività | [economia-dashboard](https://un-mistico.github.io/economia-dashboard/) |
+| 💰 Economia | Ricchezza, debito, spesa pubblica, Superbonus, tasse, disuguaglianze, lavoro, potere d'acquisto | [economia-dashboard](https://un-mistico.github.io/economia-dashboard/) |
 | 🚢 Immigrazione | Presenza, confronto UE, rotte, origini, rimpatri, criminalità, conti pubblici | [immigrazione-dashboard](https://un-mistico.github.io/immigrazione-dashboard/) |
 | ⚖️ Giustizia | Denunce, reati irrisolti, forze dell'ordine, processi, carceri, magistrati, costi | [giustizia-dashboard](https://un-mistico.github.io/giustizia-dashboard/) |
 
